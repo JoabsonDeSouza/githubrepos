@@ -1,7 +1,7 @@
 # GitHub Repos
 GitHub Repos é um projeto feito com intuito educacional.
 
-<img align="right" alt="GIF" src="https://media.giphy.com/media/836HiJc7pgzy8iNXCn/giphy.gif" />
+<img align="center" alt="GIF" src="/src/assets/project.gif" />
 
 Este projeto visa o aprendizado com as tecnologias mais atuais para desenvolvimento frontend web.
 
