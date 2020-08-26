@@ -13,8 +13,10 @@ Este projeto visa o aprendizado com as tecnologias mais atuais para desenvolvime
 * ReactJS;
 * Typescript;
 * Styled-Componenst
+<br />
+<br />
 
-### Instalação:
+### Instalação
 
 Para instalá-las abra o terminal do seu computador, navegue até a pasta raiz do projeto e digite:
 
