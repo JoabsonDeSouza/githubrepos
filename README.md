@@ -4,7 +4,6 @@ GitHub Repos é um projeto feito com intuito educacional.
 <img align="center" alt="GIF" src="/src/assets/project.gif" width="100%" />
 
 <br />
-<br />
 
 Este projeto visa o aprendizado com as tecnologias mais atuais para desenvolvimento frontend web.
 
@@ -13,7 +12,6 @@ Este projeto visa o aprendizado com as tecnologias mais atuais para desenvolvime
 * ReactJS;
 * Typescript;
 * Styled-Componenst
-<br />
 <br />
 
 ### Instalação
