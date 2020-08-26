@@ -1,26 +1,42 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider, DefaultTheme } from 'styled-components';
+import Routes from './routes';
+import GlobalStyle from './styles/global';
 
-function App() {
+import light from './styles/themes/light';
+import dark from './styles/themes/dark';
+import usePersistedState from './util/usePersistedState';
+
+import Header from './components/Header';
+
+import { AppContext } from './context/AppContext';
+
+const App: React.FC = () => {
+  const [theme, setTheme] = usePersistedState<DefaultTheme>('@theme', dark);
+
+  // eslint-disable-next-line @typescript-eslint/explicit-function-return-type
+  const toggleTheme = () => {
+    setTheme(theme.title === 'light' ? dark : light);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <ThemeProvider theme={theme}>
+        <AppContext.Provider
+          value={{
+            buttonBack: false,
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          <BrowserRouter>
+            <Header toggleTheme={toggleTheme} />
+            <Routes />
+            <GlobalStyle />
+          </BrowserRouter>
+        </AppContext.Provider>
+      </ThemeProvider>
+    </>
   );
-}
+};
 
 export default App;
